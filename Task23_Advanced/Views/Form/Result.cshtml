@@ -1,0 +1,8 @@
+﻿@model List<string>
+@using Task23_Advanced.Content
+@{
+    ViewBag.Title = "Result";
+}
+
+<h3 class="result-header">Form fulfillment result:</h3>
+@Html.ConvertToList(@Model)

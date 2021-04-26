@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Guest";
+}
+
+@using (Html.BeginForm("AddReview", "Guest", FormMethod.Post))
+{
+    <p>Name:</p>
+    @Html.TextBox("name")
+    <p>Comment:</p>
+    @Html.TextBox("textReview")
+    <input class="submit-button" type="submit" value="Submit" />
+}
+
+@foreach (var item in ViewBag.Reviews)
+{
+    <div class="text-box pt-3">
+        <div>
+            <p>@item.AuthorName</p>
+        </div>
+        <div>
+            <p>@item.Content</p>
+        </div>
+        <div>
+            <p>@item.Date.ToString("dd/MM/yyyy hh:mm")</p>
+        </div>
+    </div>
+}

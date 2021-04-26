@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/styles.css")
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <img class="navbar-brand" src="~/Content/logo.png">
+                <p class="navbar-header mx-auto">Library</p>
+            </nav>
+        </header>
+        <div class="main-block">
+            <div class="container-fluid">
+                <div class="col-10 float-left">
+                    @RenderBody()
+                </div>
+                <div class="right-sidebar col-2 float-left text-center">
+                    <ul>
+                        <li>@Html.ActionLink("Main", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Comments", "Index", "Guest")</li>
+                        <li>@Html.ActionLink("Form", "Index", "Form")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row text-center">
+                <p class="col-12">Kirill Shkuratiuk kirillshkuratiuk@gmail.com <br /> <a class="col-12" href="#top">Go back to top</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

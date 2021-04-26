@@ -1,0 +1,11 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2>@Model.Count errors occured</h2>
+
+@foreach (string error in Model)
+{
+    <p class="error">@error</p>
+}

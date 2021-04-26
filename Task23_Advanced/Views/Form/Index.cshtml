@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+}
+
+@using (Html.BeginForm("SubmitData", "Form", FormMethod.Post))
+{
+    <div class="personal-form">
+        <p>First name:</p>
+        @Html.TextBox("FirstName")
+        <p>Last name:</p>
+        @Html.TextBox("LastName")
+        <p>Email:</p>
+        @Html.TextBox("Email")
+        <p>Male: @Html.RadioButton("Gender", "Male")</p>
+        <p>Female: @Html.RadioButton("Gender", "Female")</p>
+        <p>@Html.CheckBox("Agreement") Do you allow us to process your personal data?</p>
+        <input class="submit-button" type="submit" value="Submit" />
+    </div>
+}
